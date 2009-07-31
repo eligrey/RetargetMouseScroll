@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Control Frame - RetargetMouseScroll Test Suite</title>
+<meta charset="utf-8" />
+<style type="text/css">
+#frame4ctrl {
+	margin-left: 25%;
+	margin-right: 25%;
+	width: 50%;
+	height: 100px;
+	background-color: limegreen;
+	border: 1px solid black;
+}
+</style>
+<script type="text/javascript" src="../RetargetMouseScroll.js"></script>
+</head>
+<body>
+<h1>Control Frame</h1>
+<p>Do all your scrolling in this frame.</p>
+<p id="frame4ctrl">Scroll in here to also scroll frame 4</p>
+<table border="1">
+<tr>
+  <th></th>
+  <th>Frame 2</th>
+  <th>Frame 3</th>
+  <th>Frame 4</th>
+</tr>
+  <td>Scroll multiplier</td>
+  <td>0.5</td>
+  <td>-3</td>
+  <td>10</td>
+<tr>
+</table>
+<script type="text/javascript">
+RetargetMouseScroll(document, top.document.getElementsByTagName("frame")[1].contentWindow, false, 0.5);
+RetargetMouseScroll(document, top.document.getElementsByTagName("frame")[2].contentWindow, false, -3);
+RetargetMouseScroll(document.getElementById("frame4ctrl"), top.document.getElementsByTagName("frame")[3].contentWindow, true, 10);
+</script>
+</body>
+</html>

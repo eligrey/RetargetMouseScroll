@@ -1,3 +1,5 @@
+*Version 0.0.2*
+
 RetargetMouseScroll implements a simple API to retarget mouse scroll events.
 
 Usage
@@ -34,9 +36,34 @@ More advanced example using a popup:
 
 In the previous example, all mouse scrolling on the main document is retargetted to the popup until it is closed.
 
-Supported Browsers \*
+Known Supported Browsers
 --------------------
 
-* Firefox 3.5
+* Firefox
+   * 1.5? \*
+   * 2 \*
+   * 3
+   * 3.5
+* Opera \*
+   * 9
+   * 10
+* Internet Explorer \*
+   * 7?
+   * 8
+* Google Chrome
+   * 1?
+   * 2
+   * 3
+* Safari \*
+   * 3?
+   * 4
 
-**\*** *I know the list is terribly small, I'll add more browsers soon*
+**\*** *Does not support horizontal scroll capturing and retargetting*
+
+If the version number is followed by a "?", I'm assuming it works but I haven't tested it yet.
+
+Testers Needed
+--------------
+
+I need testers to contact me if RetargetMouseScroll works (or doesn't work) in their browsers. Please make sure to mention if it also works with horizontal scrolling.
+

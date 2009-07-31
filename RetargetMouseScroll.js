@@ -1,5 +1,5 @@
 /*
-* RetargetWindowMouseScroll JavaScript Library v0.0.1
+* RetargetWindowMouseScroll JavaScript Library v0.0.2
 * 2009-07-30
 * By Elijah Grey, http://eligrey.com
 *
@@ -10,7 +10,7 @@
 */
 
 if (typeof this.RetargetMouseScroll !== "function") (function() {
-	var mouseScrollEvents = ["DOMMouseScroll", "mousescroll"];
+	var mouseScrollEvents = ["DOMMouseScroll", "mousewheel"];
 	
 	function handleScroll (evt, targetWindow, preventDefault, scrollMultiplier) {
 		if (preventDefault && evt.preventDefault)

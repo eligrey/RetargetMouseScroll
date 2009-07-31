@@ -22,14 +22,15 @@ Examples
 
 More advanced example using a popup:
 
-    var win      = window.open("/", "example", "w="+screen.availWidth/3.5+",h="+screen.availHeight/3.5+",scrollbars=yes"),
-    retargetting = RetargetMouseScroll(document, win),
-    closedCheck  = setInterval(function() {
-    	if (win.closed) {
-    		retargetting.restore();
-    		clearInterval(closedCheck);
-    	}
-    }, 1000);
+    var win = window.open("/", "example", "w=" + (screen.availWidth / 3.5)
+                                          + ",h=" + (screen.availHeight / 3.5)
+                                          + ",scrollbars=yes,resize=yes");
+    win.addEventListener("DOMContentLoaded", function() {
+        var retargetting = RetargetMouseScroll(document, win);
+        win.onunload = function () {
+    	    retargetting.restore();
+        };
+    }, false);
 
 In the previous example, all mouse scrolling on the main document is retargetted to the popup until it is closed.
 

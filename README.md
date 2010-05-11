@@ -67,3 +67,5 @@ Testers Needed
 
 I need testers to contact me if RetargetMouseScroll works (or doesn't work) in their browsers. Please make sure to mention if it also works with horizontal scrolling.
 
+
+![Tracking image](//in.getclicky.com/212712ns.gif =1x1)

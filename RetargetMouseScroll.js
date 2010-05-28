@@ -1,7 +1,7 @@
 /*
 * RetargetWindowMouseScroll JavaScript Library v0.0.2
 * 2009-07-30
-* By Elijah Grey, http://eligrey.com
+* By Eli Grey, http://eligrey.com
 *
 * http://github.com/eligrey/RetargetMouseScroll/tree/master
 *

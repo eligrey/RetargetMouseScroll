@@ -1,5 +1,5 @@
 /*
-* RetargetWindowMouseScroll JavaScript Library v0.0.2
+* RetargetMouseScroll JavaScript Library v0.0.2
 * 2009-07-30
 * By Eli Grey, http://eligrey.com
 *
@@ -8,6 +8,10 @@
 * License: GNU GPL v3 and the X11/MIT license
 *   See COPYING.md or http://eligrey.com/blog/about/license
 */
+
+/*! @source http://purl.eligrey.com/github/RetargetMouseScroll/blob/master/
+ *          RetargetMouseScroll.js
+ */
 
 if (typeof this.RetargetMouseScroll !== "function") (function() {
 	var mouseScrollEvents = ["DOMMouseScroll", "mousewheel"];

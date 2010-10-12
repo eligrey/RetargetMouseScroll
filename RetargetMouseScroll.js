@@ -5,8 +5,8 @@
 *
 * http://github.com/eligrey/RetargetMouseScroll/tree/master
 *
-* License: GNU GPL v3 and the X11/MIT license
-*   See COPYING.md or http://eligrey.com/blog/about/license
+* Licensed under the X11/MIT License
+*   See LICENSE.md or http://eligrey.com/blog/about/license
 */
 
 /*! @source http://purl.eligrey.com/github/RetargetMouseScroll/blob/master/

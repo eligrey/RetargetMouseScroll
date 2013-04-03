@@ -6,10 +6,10 @@ Usage
 -----
 
     RetargetMouseScroll(
-        element         :Node,    // default: document
-        targetWindow    :Window,  // default: window
-        preventDefault  :Boolean, // default: true
-        scrollMultiplier:Number   // default: 1.0
+        element         :Node,        // default: document
+        target          :Node/Window, // default: window
+        preventDefault  :Boolean,     // default: true
+        scrollMultiplier:Number       // default: 1.0
     )
 
 `RetargetMouseScroll` returns an object containing a `restore` method. Calling the method restores the default scrolling.

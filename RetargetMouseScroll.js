@@ -16,7 +16,7 @@
 if (typeof this.RetargetMouseScroll !== "function") (function() {
 	var mouseScrollEvents = ["DOMMouseScroll", "mousewheel"];
 	
-	function handleScroll (evt, targetWindow, preventDefault, scrollMultiplier) {
+	function handleScroll (evt, target, preventDefault, scrollMultiplier) {
 		if (preventDefault && evt.preventDefault)
 			evt.preventDefault();
 		
@@ -29,17 +29,23 @@ if (typeof this.RetargetMouseScroll !== "function") (function() {
 		
 		if (evt.wheelDeltaX || ("axis" in evt && "HORIZONTAL_AXIS" in evt && evt.axis == evt.HORIZONTAL_AXIS))
 			// horizontal scroll
-			targetWindow.scrollBy(scrollAmount, 0);
+			if (target.scrollBy)
+				target.scrollBy(scrollAmount, 0);
+			else
+				target.scrollLeft += scrollAmount;
 		else // vertical scroll
-			targetWindow.scrollBy(0, scrollAmount);
+			if (target.scrollBy)
+				target.scrollBy(0, scrollAmount);
+			else
+				target.scrollTop += scrollAmount;
 	};
 	
-	this.RetargetMouseScroll = function (elem, targetWindow, preventDefault, scrollMultiplier) {
+	this.RetargetMouseScroll = function (elem, target, preventDefault, scrollMultiplier) {
 		if (!elem)
 			elem = document;
 		
-		if (!targetWindow)
-			targetWindow = window;
+		if (!target)
+			target = window;
 		
 		if (typeof preventDefault !== "boolean")
 			preventDefault = true;
@@ -47,7 +53,7 @@ if (typeof this.RetargetMouseScroll !== "function") (function() {
 		var addListener, removeListener, restoreFn,
 		handler = function (evt) {
 			evt = evt || window.event;
-			handleScroll(evt, targetWindow, preventDefault, scrollMultiplier);
+			handleScroll(evt, target, preventDefault, scrollMultiplier);
 		};
 		
 		if (addListener = elem.addEventListener) {

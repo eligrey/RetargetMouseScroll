@@ -17,8 +17,13 @@ if (typeof this.RetargetMouseScroll !== "function") (function() {
 	var mouseScrollEvents = ["DOMMouseScroll", "mousewheel"];
 	
 	function handleScroll (evt, target, preventDefault, scrollMultiplier) {
-		if (preventDefault && evt.preventDefault)
-			evt.preventDefault();
+		if (preventDefault) {
+	        if (evt.preventDefault) {
+	            evt.preventDefault();
+	        } else {
+	            event.returnValue = false;
+	        }
+	    }
 		
 		var scrollAmount = evt.detail
 		                   || (-evt.wheelDelta / 40); // convert wheelData to lines

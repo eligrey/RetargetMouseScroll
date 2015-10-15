@@ -6,7 +6,7 @@
 * http://github.com/eligrey/RetargetMouseScroll/tree/master
 *
 * Licensed under the MIT License
-*   See LICENSE.md or http://eligrey.com/blog/about/license
+*   See https://github.com/eligrey/RetargetMouseScroll/blob/master/LICENSE.md
 */
 
 /*! @source http://purl.eligrey.com/github/RetargetMouseScroll/blob/master/

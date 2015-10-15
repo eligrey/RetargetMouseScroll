@@ -5,7 +5,7 @@
 *
 * http://github.com/eligrey/RetargetMouseScroll/tree/master
 *
-* Licensed under the X11/MIT License
+* Licensed under the MIT License
 *   See LICENSE.md or http://eligrey.com/blog/about/license
 */
 

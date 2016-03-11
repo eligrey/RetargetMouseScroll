@@ -1,0 +1,18 @@
+{
+  "name": "RetargetMouseScroll",
+  "authors": [
+    "Eli Grey <~@eligrey.com>"
+  ],
+  "description": "A JavaScript library for retargetting mouse scroll events.",
+  "main": "RetargetMouseScroll.js",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "http://eligrey.com/blog/post/retargetmousescroll",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
